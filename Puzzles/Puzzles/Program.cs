@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
-using Puzzles.Day_One;
+using Puzzles.Solution;
 
 namespace Puzzles
 {
@@ -8,9 +8,13 @@ namespace Puzzles
     {
         public static void Main(string[] args)
         {
-            long neededFuel = TaskOne.Solve();
-            Console.WriteLine(neededFuel);
-            Debug.WriteLine(neededFuel);
+            long fuelForMass = TaskOne.CalculateFuelForMass();
+            Console.WriteLine(fuelForMass);
+            Debug.WriteLine(fuelForMass);
+
+            long fuelForMassAndFuel = TaskOne.CalculateFuelForMassAndFuel();
+            Console.WriteLine(fuelForMassAndFuel);
+            Debug.WriteLine(fuelForMassAndFuel);
         }
     }
 }

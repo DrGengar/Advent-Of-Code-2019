@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 
-namespace Puzzles.Day_One.Parser
+namespace Puzzles.Solution.Parser
 {
     public abstract class AbstractTextFileParser<T>
     {

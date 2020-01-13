@@ -1,4 +1,4 @@
-﻿namespace Puzzles.Day_One.Parser
+﻿namespace Puzzles.Solution.Parser
 {
     public class IntegerTextFileParser : AbstractTextFileParser<int>
     {
