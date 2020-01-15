@@ -1,18 +1,20 @@
-﻿using System.Collections.Generic;
-using Puzzles.Solution.Parser;
+﻿using Challenges.Source;
+using Challenges.Source.Converter;
+using Challenges.Source.TextFile;
+using System.Collections.Generic;
 
-namespace Puzzles.Solution
+namespace Challenges.Solution.DayOne
 {
     public class TaskOne
     {
-        private const string MODULE_MASS_TEXT_FILE = "D:\\Arbeit\\repositories\\Advent-Of-Code-2019\\Puzzles\\Puzzles\\Solution\\ModuleMassList.txt";
+        private const string MODULE_MASS_TEXT_FILE_PATH = "D:\\Arbeit\\repositories\\Advent-Of-Code-2019\\Puzzles\\Puzzles\\Solution\\DayOne\\ModuleMassList.txt";
 
         public static long CalculateFuelForMass()
         {
-            IntegerTextFileParser parser = new IntegerTextFileParser();
+            TextFileParser<int> parser = new TextFileParser<int>(new IntegerConverter());
             FuelCalculator calculator = new FuelCalculator();
 
-            List<int> moduleMasses = parser.Parse(MODULE_MASS_TEXT_FILE);
+            List<int> moduleMasses = parser.Parse(MODULE_MASS_TEXT_FILE_PATH);
             long neededFuel = 0;
             foreach (int mass in moduleMasses)
             {
@@ -25,10 +27,10 @@ namespace Puzzles.Solution
 
         public static long CalculateFuelForMassAndFuel()
         {
-            IntegerTextFileParser parser = new IntegerTextFileParser();
+            TextFileParser<int> parser = new TextFileParser<int>(new IntegerConverter());
             FuelCalculator calculator = new FuelCalculator();
 
-            List<int> moduleMasses = parser.Parse(MODULE_MASS_TEXT_FILE);
+            List<int> moduleMasses = parser.Parse(MODULE_MASS_TEXT_FILE_PATH);
             long neededFuel = 0;
             foreach (int mass in moduleMasses)
             {

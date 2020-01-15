@@ -1,7 +1,6 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 
-namespace Puzzles.Solution
+namespace Challenges.Source
 {
     public class Module
     {
